@@ -1,0 +1,372 @@
+/* Custom properties matching the game theme */
+:root {
+    --bg-gradient-start: #0b1a10;
+    --bg-gradient-end: #050b07;
+    --card-bg: #122216;
+    --border-color: #1e3f28;
+    --text-primary: #e2e8f0;
+    --text-muted: #8da294;
+    --football-green: #2ea44f;
+    --football-green-hover: #2c974b;
+    --home-gray: #30363d;
+    --home-gray-hover: #3c444d;
+}
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Centralized Layout Container */
+.confirmation-container {
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+
+/* Sport Badge & Header */
+.page-header {
+    margin-bottom: 25px;
+}
+
+.sport-badge {
+    background-color: rgba(46, 164, 79, 0.15);
+    border: 1px solid var(--football-green);
+    color: #5cd07e;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+/* Main Display Card */
+.confirmation-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.message-group h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.message-group p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+/* Flexbox Action Buttons */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Reusable Button Blueprint */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Custom States for Confirm and Home */
+.btn-confirm {
+    background-color: var(--football-green);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(46, 164, 79, 0.2);
+}
+
+.btn-confirm:hover {
+    background-color: var(--football-green-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(46, 164, 79, 0.3);
+}
+
+.btn-confirm:active {
+    transform: translateY(0);
+}
+
+.btn-home {
+    background-color: var(--home-gray);
+    color: var(--text-primary);
+    border: 1px solid #444c56;
+}
+
+.btn-home:hover {
+    background-color: var(--home-gray-hover);
+    color: #ffffff;
+}
+
+/* Tiny Warning Footer inside Card */
+.warning-text {
+    font-size: 0.85rem;
+    color: #e5534b;
+    opacity: 0.8;
+    letter-spacing: 0.3px;
+}
+
+/* Responsive adjustment for wider viewports */
+@media (min-width: 480px) {
+    .button-group {
+        flex-direction: row-reverse;
+    }
+    .btn {
+        flex: 1;
+    }
+}
+/* Color Palette variables for consistency */
+:root {
+    --bg-dark: #0a0f0d;
+    --card-bg: #141c18;
+    --accent-green: #2ecc71;
+    --accent-yellow: #f1c40f;
+    --text-main: #f5f6fa;
+    --text-muted: #95a5a6;
+    --border-color: #23302a;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.quiz-body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Game Layout Container */
+.game-container {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Sleek Floating Header */
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 0 10px;
+}
+
+.stage-indicator {
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Modern Scoreboard Badge */
+.score-badge {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 6px 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.score-label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.score-val {
+    color: var(--accent-yellow);
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+/* Wrapper containing passage + question */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Reading Passage Box */
+.passage-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 25px var(--shadow-color);
+    position: relative;
+}
+
+.card-tag {
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    background-color: var(--accent-green);
+    color: #000;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+}
+
+.passage-text {
+    font-size: 1.05rem;
+    color: #e2e8f0;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+/* Warm Hint Bar */
+.hint-banner {
+    background: rgba(241, 196, 15, 0.08);
+    border: 1px dashed var(--accent-yellow);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.hint-icon {
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+.hint-banner p {
+    font-size: 0.9rem;
+    color: #fce484;
+}
+
+/* Question Area styling */
+.question-box {
+    margin: 15px 0 5px 0;
+    padding: 0 10px;
+}
+
+.question-box h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+/* Interactive Options Cards Grid */
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+@media (min-width: 600px) {
+    .options-grid {
+        grid-template-columns: 1fr 1fr; /* Split into 2x2 grid on desktop */
+    }
+}
+
+.option-card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: var(--text-main);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+/* Styled letters (A, B, C, D) inside cards */
+.option-letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: var(--border-color);
+    color: var(--text-main);
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+}
+
+.option-text {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Hover / Focus Interactive State */
+.option-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-green);
+    background-color: rgba(46, 204, 113, 0.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5), 0 0 10px rgba(46, 204, 113, 0.1);
+}
+
+.option-card:hover .option-letter {
+    background-color: var(--accent-green);
+    color: #000;
+}
+
+.option-card:active {
+    transform: translateY(-1px);
+}
